@@ -12,7 +12,7 @@ import (
 
 // Person - Our struct for all persons
 type Profession struct {
-	Id   string `json:"id"`
+	Id   int `json:"id"`
 	Name string `json:"name"`
 	Desc string `json:"desc"`
 }
@@ -38,9 +38,9 @@ func handleRequests() {
 
 func main() {
 	Professions = []Profession{
-		{Id: "1", Name: "Kesselflicker", Desc: "KFL"},
-		{Id: "2", Name: "Pinselmacher", Desc: "PMR"},
-		{Id: "3", Name: "Hahnenspanner", Desc: "HHSP"},
+		{Id: 1, Name: "Kesselflicker", Desc: "KFL"},
+		{Id: 2, Name: "Pinselmacher", Desc: "PMR"},
+		{Id: 3, Name: "Hahnenspanner", Desc: "HHSP"},
 	}
 	handleRequests()
 }
