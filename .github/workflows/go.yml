@@ -46,10 +46,6 @@ jobs:
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}          
-
-      - name: Get SHA Tag      
-        uses: tenhaus/get-release-or-tag@v2
-        id: tag      
             
       - name: Build and push Docker image
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
@@ -58,7 +54,7 @@ jobs:
           file: ./Dockerfile
           build-args: PROJECT_VERSION="$PROJECT_VERSION"
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}, ${{ github.sha }}
           labels: ${{ steps.meta.outputs.labels }}
 
 
