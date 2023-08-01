@@ -43,6 +43,7 @@ func main() {
 		{Id: 1, Name: "Kesselflicker", Desc: "KFL"},
 		{Id: 2, Name: "Pinselmacher", Desc: "PMR"},
 		{Id: 3, Name: "Hahnenspanner", Desc: "HHSP"},
+		{Id: 4, Name: "Meyster", Desc: "MEY"},
 	}
 	handleRequests()
 }
